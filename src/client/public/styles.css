@@ -1,0 +1,93 @@
+@import 'normalize.css';
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: #4b4b4b;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable",
+    "Segoe UI", system-ui, ui-sans-serif, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* MF - MicroFrontend (prefix) */
+.mf-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mf-app-placeholder {
+    position: relative;
+    padding: 16px;
+    overflow: auto;
+}
+
+.mf-wrapper .mf-app-placeholder:nth-child(1) {
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+}
+
+.mf-wrapper .mf-app-placeholder:nth-child(2) {
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+}
+
+.mf-wrapper .mf-app-placeholder:nth-child(3) {
+    border-top: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+}
+
+.mf-wrapper .mf-app-placeholder:nth-child(4) {
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+}
+
+.mf-loader {}
+.mf-loader__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mf-loader > div {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 2px;
+    animation-fill-mode: both;
+    background-color: #7252D3;
+    border-radius: 100%;
+}
+.mf-loader > div:nth-child(1) {
+    animation: scale .75s -.24s infinite cubic-bezier(.2,.68,.18,1.08);
+}
+.mf-loader > div:nth-child(2) {
+    animation: scale .75s -.12s infinite cubic-bezier(.2,.68,.18,1.08);
+}
+.mf-loader > div:nth-child(3) {
+    animation: scale .75s 0s infinite cubic-bezier(.2,.68,.18,1.08);
+}
+
+@keyframes scale {
+    30% {
+        -webkit-transform: scale(.3);
+        transform: scale(.3)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.mf-error-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 22px;
+    color: #7252D3;
+}

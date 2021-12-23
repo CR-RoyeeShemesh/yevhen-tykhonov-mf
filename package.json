@@ -1,0 +1,38 @@
+{
+  "name": "micro-frontend-main",
+  "version": "1.0.0",
+  "description": "Micro front-end web application",
+  "main": "src/server/main.ts",
+  "private": true,
+  "keywords": [
+    "micro",
+    "front-end",
+    "typescript"
+  ],
+  "scripts": {
+    "client:build": "node ./builder-client.js",
+    "server:build": "rm -rf ./build/server/* && tsc -p src/server/tsconfig.json && cp ./package.json ./build/server",
+    "server": "node ./build/server/main.js",
+    "project:build": "npm i && node builder-project.js"
+  },
+  "config": {
+    "PORT": "3000",
+    "HOST": "localhost",
+    "FOLDER_SUB_APPLICATIONS": "sub-applications"
+  },
+  "author": "Eugene Tikhonov",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.25.0",
+    "fastify-static": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^16.11.13",
+    "async": "^3.2.2",
+    "fs-extra": "^10.0.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0"
+  }
+}

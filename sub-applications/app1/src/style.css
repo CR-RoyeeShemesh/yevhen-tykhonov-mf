@@ -1,0 +1,49 @@
+
+/* GR - Grid (prefix) */
+.gr-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4b4b4b;
+    border: 2px solid rgba(224, 224, 224, 0.7);
+    border-collapse: collapse;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable",
+    "Segoe UI", system-ui, ui-sans-serif, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.gr-table, .gr-table::after, .gr-table::before {
+    box-sizing: border-box;
+}
+
+.gr-table__header {
+    font-size: 18px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.gr-table__header-content {
+    letter-spacing: 0.06em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    vertical-align: middle;
+}
+
+.gr-table__body {}
+.gr-table__body-row {}
+.gr-table__body-content {
+    padding: 20px;
+    font-size: 16px;
+    background: #fff;
+    border-top: 0;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.7);
+}
+
+.gr-table__body-row:nth-child(even) .gr-table__body-content {
+    background: #f8f8f8;
+}
+
+.gr-table__body-row:hover .gr-table__body-content {
+    background: #d3eeff !important;
+}
